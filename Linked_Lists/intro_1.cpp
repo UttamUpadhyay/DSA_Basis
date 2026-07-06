@@ -61,7 +61,7 @@ class Linkedlist {
     void pop_front() {
         Node * temp = head;
         head = head -> next;
-        // temp -> next = nullptr;
+        // temp -> next = nullptr;    
         delete(temp);
         // we can also check whether the linkedlist is empty or not, in case of empty we can return anything
        
@@ -82,6 +82,44 @@ class Linkedlist {
         
     }
 
+    //--------------------------------------------------------------------------------------
+    //5. insert node in middle of LL
+    void insert(int val, int pos) {  // position greater than 0
+        if (pos == 0) {
+            push_front(val);
+            return;
+        }
+        Node * node_3 = new Node(val);  //step 1 : To create new node
+        Node * temp = head;
+        for (int i = 0; i < pos - 1; i++) {
+            temp = temp -> next;
+        }
+        node_3 -> next = temp -> next;  // point new node to temp next to save linkedlists address
+        temp -> next = node_3;         // then point temp to new node 
+        
+        size++;
+    } 
+    // --------------------------------------------------------------------------------------
+    // 6. To search a node in LL
+    void search(int key) {
+        Node * temp = head;
+        bool find = false;
+        while (temp != nullptr) {
+            if (temp -> data == key) {
+                find = true;
+            }
+            temp = temp -> next;
+        }
+        if (find == true) {
+            cout << "Elements found!!" << endl;
+        }
+        else {
+            cout << "Elements Not found!!" << endl;
+        }
+
+
+    }
+
     //TO PRINT LINKEDLIST
     void display() {
         Node * temp = head;
@@ -99,12 +137,20 @@ int main() {
     l1.push_front(2);
     l1.push_front(3);
     l1.push_front(4); 
+
+
     l1.push_back(5);
     l1.push_back(6); //Output : 4 3 2 1 5 6 
                      //   Size of linkedlist : 6
     
     l1.pop_front(); 
     l1.pop_back();
+
+    l1.insert(4,2);
+
+    l1.search(4);
+    l1.search(8);
+    
 
     l1.display();
 }
