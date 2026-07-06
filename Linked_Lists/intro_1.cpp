@@ -28,7 +28,7 @@ class Linkedlist {
         // step_2 : new node next point head 
         // step_3 : head point new node
     public :
-    void push_front(int val) {
+    void push_front(int val) {    //Time Complexity : O(1)  && Space Complexity : O(1)
         Node * node_1 = new Node(val);
 
         // Node newNode(val);     ----create new node by static way (delete after execution of the task)
@@ -43,7 +43,7 @@ class Linkedlist {
     }
     // -------------------------------------------------------------------------------
     // 2. push_back
-    void push_back(int val) {
+    void push_back(int val) {  //Time Complexity : O(n)  && Space Complexity : O(1)
         Node * node_2 = new Node(val);
         Node * temp = head;
         if (head == nullptr) {
@@ -58,7 +58,7 @@ class Linkedlist {
     }
     // --------------------------------------------------------------------------------
     // 3. pop_front
-    void pop_front() {
+    void pop_front() {  //Time Complexity : O(1)  && Space Complexity : O(1)
         Node * temp = head;
         head = head -> next;
         // temp -> next = nullptr;    
@@ -69,7 +69,11 @@ class Linkedlist {
     }
     // --------------------------------------------------------------------------------------
     // 4. pop_back;
-    void pop_back() {
+    void pop_back() {  //Time Complexity : O(n)  && Space Complexity : O(1)
+        if (head == nullptr) {
+            cout << "Linkedlist is empty!!" << endl;
+            return;
+        }
         Node * temp = head;
         while (temp != nullptr) {
             if (temp -> next -> next == nullptr) {
@@ -84,6 +88,8 @@ class Linkedlist {
 
     //--------------------------------------------------------------------------------------
     //5. insert node in middle of LL
+
+    //Time Complexity : O(n)  && Space Complexity : O(1)
     void insert(int val, int pos) {  // position greater than 0
         if (pos == 0) {
             push_front(val);
@@ -101,7 +107,7 @@ class Linkedlist {
     } 
     // --------------------------------------------------------------------------------------
     // 6. To search a node in LL
-    void search(int key) {
+    void search(int key) {  //Time Complexity : O(n)  && Space Complexity : O(1)
         Node * temp = head;
         bool find = false;
         while (temp != nullptr) {
