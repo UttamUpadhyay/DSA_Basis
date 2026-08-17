@@ -1,2 +1,11 @@
 . -> member access operators called in cpp
-:: -> scope resolution operators in cpp
+:: -> scope resolution operators in cpp ~~ use to print global variable
+variable defined in main() -> local variable
+variable defind outer -> global variable
+
+Syntax for access global elements in Class -: 
+Return type ClassName :: functionname(parameters) {
+    
+}
+
+-----------------------------------------------
