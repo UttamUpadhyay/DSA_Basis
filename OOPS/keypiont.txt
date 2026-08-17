@@ -1,0 +1,2 @@
+. -> member access operators called in cpp
+:: -> scope resolution operators in cpp
