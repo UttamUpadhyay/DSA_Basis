@@ -1,5 +1,4 @@
 
-    // cout << CQ.DeQueue() << endl;
-    // cout << CQ.DeQueue() << endl;
-    // cout << CQ.DeQueue() << endl;
-    // cout << CQ.DeQueue() << endl
+    // InsertLeft(30);
+    // InsertLeft(40);
+    // InsertLeft(50);
