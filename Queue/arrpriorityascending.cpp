@@ -1,4 +1,4 @@
-// Question 5 : Program for Array Implementation of Priority Queue (Ascending order Array)
+// Question 4 : Program for Array Implementation of Priority Queue (Ascending order Array)
 
 #include <iostream>
 using namespace std;
@@ -30,13 +30,21 @@ int ArrDelt(int arr[], int N, int i)
     N = N - 1;
     return 0;
 }
-int Dequeue(int PQ[], int N) {
-  int  x = PQ[0];
-    ArrDelt(PQ, N, 0);
+// int Dequeue(int PQ[], int N) {
+//   int  x = PQ[0];
+//     ArrDelt(PQ, N, 0);
   
-    return x;
-}
+//     return x;
+// }
 
+
+// Question 5 : Program for Array Implementation of Priority Queue (Descending Array)
+int Dequeue(int PQ[], int N) {
+    int x = PQ[N - 1];
+    ArrDelt(PQ,  N, N - 1);
+    return x;
+
+}
 int main() {
     int N = 7;
     int a[N] = {1, 3, 2, 5, 9, 4, 7};
