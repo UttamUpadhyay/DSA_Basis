@@ -6,6 +6,7 @@ class Student{
     int marks;
     // int size;
     int arr[size];
+    int total;
     public:
     
     void getmarks(int []);
