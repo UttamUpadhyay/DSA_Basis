@@ -2,7 +2,7 @@
 using namespace std;
 //namespace to defined the scope of variable
 
-class Srtudent{
+class Student{
     int rollno;
     string name;
     public:
