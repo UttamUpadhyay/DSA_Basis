@@ -9,3 +9,9 @@ Return type ClassName :: functionname(parameters) {
 }
 
 -----------------------------------------------
+Destructor type 
+
+Implicit Destructor //by default 
+User- Defined Destructor
+Virtual Destructor                        //Will be Discuss in Polymorphism
+Pure Virtual Destructor                   // Will be discuss in ||
