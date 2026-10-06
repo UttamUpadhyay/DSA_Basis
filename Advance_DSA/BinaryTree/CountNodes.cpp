@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 
@@ -101,6 +102,18 @@ int Height(node * T) {
     return 1 + max(Lh,Rh);
 }
 
+bool IsComplete(node * T) {
+    int N = CountNodes(T);
+    int h = Height(T);
+    int x = power(2, h + 1);
+    if (N == x - 1) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 int main() {
     node * root = NULL;
     root = Makenode('A');
@@ -117,5 +130,5 @@ int main() {
     cout << "\nThe number of N1 node in Binary tree is : " << CountN1(root);
     cout << "\nBinary tree is strictly binary or not : " << IsStrictly(root);
     cout << "\nThe height of the binary tree is : " << Height(root);
-   
+    cout << "\nIs binary Tree complete or not " << IsComplete(root);
 }
