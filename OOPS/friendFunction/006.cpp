@@ -33,7 +33,7 @@ void B:: getb (int y) {
 void B :: showb() {
     cout << "The value of b : " << b << endl;
 }
-void A :: displayB(B B1) {         //Priority high of memeber function that's why show it declare by the meber function
+void A :: displayB(B B1) {         //Priority high of member function that's why show it declare by the member function
     cout << "The value of b using friend function : " << B1.b << endl;
 }
 void B :: displayA(A A1) {
