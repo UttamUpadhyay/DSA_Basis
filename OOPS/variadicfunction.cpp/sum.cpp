@@ -2,7 +2,7 @@
 #include<cstdarg>
 using namespace std;
 
-void display(int size, ...) // ... -> ellicepses : shiw that function required the varaiable parameters
+void display(int size, ...) // ... -> ellicepses : show that function required the varaiable parameters
 {
 int n;
 int sum = 0;

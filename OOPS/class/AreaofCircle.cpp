@@ -2,10 +2,10 @@
 using namespace std;
 
 class Area {
-    private:
-    float r;
+   
+    float r;  //data member
     public:
-    void getradius(float);
+    void getradius(float);  //member function
     float area();
 };
 void Area :: getradius(float a) {
